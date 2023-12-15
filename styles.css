@@ -328,3 +328,10 @@ form div:last-child {
 .portfolio-card-content .btn:hover {
     background-color: #0056b3;
 }
+
+
+.profile-image {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 50px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* Adicione margem à direita para separar do texto */
+}
