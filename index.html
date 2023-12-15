@@ -13,7 +13,7 @@
 <body>
 
     <!-- Navbar usando Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="/media/avatar.png" alt="Seu Logo" width="30" height="30" class="d-inline-block align-top">
         </a>
@@ -21,24 +21,24 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-collapse collapse" id="navbarNav" style="">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Topo</a>
+                    <a class="nav-link" href="#" onclick="scrollToTop()">Topo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
+                    <a class="nav-link" href="#" onclick="scrollToPortfolio()">Projetos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre mim</a>
+                    <a class="nav-link" href="#" onclick="scrollToAboutMe()">Sobre mim</a>
                 </li>
-                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="#" onclick="scrollToContact()">Contato</a>
                 </li>
             </ul>
         </div>
     </nav>
+    
    
     <!-- Div1 Topo-->
 
@@ -46,9 +46,10 @@
         <div class="overlay-div1"></div>
         <h1>
             <img src="/media/avatar.png" alt="Sua Imagem" class="profile-image">
-            Eu sou o Souza J.
+            Eu sou o Souza J. 🙋🏾‍♂️
         </h1>
-        <h2>Fullstack Dev & Webdesigner</h2>
+        <h3 class="h2div1ajudo">Ajudo você a construir sites e sistemas, tudo para tornar o seu dia-a-dia mais fácil ❤️.</h3>
+        <h2>Fullstack Dev & Webdesigner (<span class="balonista">e Balonista</span>)</h2>
         <div class="buttons-container">
             <a href="https://wa.me/message/VUZ2JEYFR6G2O1" target="_blank">
                 <button>Orçamentos</button>
@@ -94,7 +95,7 @@
 
  <!-- Portfolio -->
         <h1 class="ptn_title">Portfolio</h1>
-        <section id="Ptn" class="portfolio-section">
+        <section id="portfolio" class="portfolio-section">
          <!-- Card 1 -->
          <div class="portfolio-card">
              <div class="portfolio-card-background" style="background-image: url('media/szm_pv.png');"></div>
@@ -102,56 +103,63 @@
              <div class="portfolio-card-content">
                  <h2>SZM BalloonTech</h2>
                  <h3 class="ptf_h3">Site Responsivo para Construtora de Balões</h3>
-                 <a href="#" class="btn">Visitar Site</a>
+                 <a href="https://devsouzaedu.github.io/SZM_SITE_V2/" class="btn">Visitar Site</a>
              </div>
          </div>
-          <!-- Card 1 -->
+          <!-- Card 2 -->
           <div class="portfolio-card">
              <div class="portfolio-card-background" style="background-image: url('media/two copy.jpg');"></div>
              <div class="portfolio-card-overlay"></div>
              <div class="portfolio-card-content">
                  <h2>Blitz Lavanderia</h2>
                  <h3 class="ptf_h3">Site Responsivo para Lavanderia, sistema de entrega e retirada</h3>
-                 <a href="#" class="btn">Visitar Site</a>
+                 <a href="https://blitzlavanderia.com.br" class="btn">Visitar Site</a>
              </div>
          </div>
-         <!-- Card 1 -->
+         <!-- Card 3 -->
          <div class="portfolio-card">
              <div class="portfolio-card-background" style="background-image: url('media/123inf.png');"></div>
              <div class="portfolio-card-overlay"></div>
              <div class="portfolio-card-content">
                  <h2>123Infláveis</h2>
                  <h3 class="ptf_h3">Site Responsivo para fabricante de infláveis</h3>
-                 <a href="#" class="btn">Visitar Site</a>
+                 <a href="http://123infláveis.shop" class="btn">Visitar Site</a>
              </div>
          </div>
      </section>
  <!----Sobre Mim-->
 
  <div>
-    <section class="sobre-mim">
+    <section id="aboutme" class="sobre-mim">
         <h1 class="aboutme_title">Sobre Mim</h1>
-        <p class="p_boutme">Eu sou um Desenvolvedor Web de Barueri, São Paulo. Minhas habilidades principais incluem HTML, CSS, Javascript e React. Estou sempre em busca de aprender sobre as mais recentes tecnologias e frameworks, o que me torna uma ótima adição a qualquer equipe..</p>
+        <p class="p_boutme">Desenvolvedor Web de Barueri, São Paulo. Especializado em HTML, CSS, Javascript e React. Apaixonado por tecnologia, música e viagens. Transformo ideias em códigos e sites impactantes. Nerd com cara de rockstar, busco inovação diária. Vamos criar algo incrível juntos!</p>
+
     </section>
 </div>
 
 <!-- Form -->
-    <h1 class="form_title">Contato</h1>
+    <h1  id="form1" class="form_title">Contato</h1>
     <form action="#" method="post">
         <div>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
         </div>
         <div>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div>
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
         </div>
+        
         <div>
-            <label for="escolha">Escolha:</label>
+            <label for="escolha">Tipo de serviço:</label>
             <select id="escolha" name="escolha">
                 <option value="landing">Landing Page</option>
                 <option value="site">Site</option>
                 <option value="app">App</option>
+                <option value="sistema">Sistema</option>
             </select>
         </div>
         <div>

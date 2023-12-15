@@ -3,6 +3,24 @@
     font-family: 'SF Pro Display Bold';
     src: url('fonts/SF-Pro-Display-Bold.otf') format('opentype');
 }
+h1, h2 {
+    font-family: 'SF Pro Display Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Definição da fonte SF Pro Display Medium para ser utilizada no projeto */
+@font-face {
+    font-family: 'SF Pro Display Medium';
+    src: url('fonts/SF-Pro-Display-Medium.otf') format('opentype');
+}
+
+/* Aplicação da fonte SF Pro Display Medium para o elemento h3 */
+h3 {
+    font-family: 'SF Pro Display Medium', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
 /* Aplicação da fonte SF Pro Display Bold para os elementos body, h1, h2, h3 */
 body, h1, h2, h3 {
@@ -18,8 +36,19 @@ body, h1, h2, h3 {
 
 /* Estilo específico para os links da barra de navegação escura */
 .navbar.navbar-dark .navbar-nav .nav-link {
-    color: #fff !important;
+    color: #cd0a0a !important;
 }
+
+/* Muda a cor do links do navbar */
+.navbar.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+/* Altera a cor dos links ao passar o mouse */
+.navbar.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ff4e4e !important;
+}
+
 
 /* Estilo para o container de cards, com layout flexível e espaço ao redor */
 .card-container {
@@ -71,7 +100,7 @@ body, h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.746); /* Altere aqui para a cor desejada */
+    background: rgba(0, 0, 0, 0.876); /* Altere aqui para a cor desejada */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +154,7 @@ input, textarea {
 /* Estilo para botões dentro do formulário, com cor de fundo e sem borda */
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: rgb(255, 60, 60);
     color: #fff;
     border: none;
     border-radius: 5px; /* Cantos arredondados */
@@ -135,7 +164,7 @@ button {
 
 /* Altera a cor de fundo do botão ao passar o mouse */
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(255, 60, 60);
 }
 
 /* Estilo para a última div dentro do formulário, com layout flexível e espaço ao redor */
@@ -158,7 +187,7 @@ form div:last-child {
     position: relative;
     background-image: url('media/div1_bg.jpg');
     background-size: cover;
-    height: 500px;
+    height: 90vh; /* Definindo a altura para 90% da altura da tela */
     color: #fff;
     text-align: center;
     display: flex;
@@ -195,7 +224,7 @@ form div:last-child {
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
-    background-color: #007bff;
+    background-color: #ff4e4e;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -334,4 +363,22 @@ form div:last-child {
     width: 50px; /* Ajuste o tamanho conforme necessário */
     height: 50px; /* Ajuste o tamanho conforme necessário */
     margin-right: 10px; /* Adicione margem à direita para separar do texto */
+}
+
+.h2div1ajudo {
+    font-size: 14px;
+    color: rgb(165, 165, 165); /* Você pode ajustar o código de cor conforme necessário */
+    z-index: 2;
+}
+
+.balonista {
+    font-size: 0.8em; /* Ajuste o tamanho conforme necessário */
+    color: #ff6060; /* Ajuste a cor conforme necessário */
+}
+
+.sobre-mim {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branca */
+    padding: 40px 20px; /* Ajuste o padding conforme necessário */
+    text-align: center;
 }
