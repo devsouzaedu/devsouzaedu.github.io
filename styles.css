@@ -1,27 +1,34 @@
-/* styles.css */
-
-.navbar.navbar-dark {
-    background-color: #000000 !important; /* Define a cor de fundo para preto (#f70000) */
+/* Definição da fonte SF Pro Display Bold para ser utilizada no projeto */
+@font-face {
+    font-family: 'SF Pro Display Bold';
+    src: url('fonts/SF-Pro-Display-Bold.otf') format('opentype');
 }
 
-.navbar.navbar-dark .navbar-nav .nav-link {
-    color: #fff !important; /* Define a cor do texto para branco (#fff) */
-}
-
-/* Reset de estilos básicos para remover margens e preenchimentos padrão */
-body, h1, h2, h3, p {
+/* Aplicação da fonte SF Pro Display Bold para os elementos body, h1, h2, h3 */
+body, h1, h2, h3 {
+    font-family: 'SF Pro Display Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Estilizando a container dos cards */
+/* Estilo específico para a barra de navegação escura */
+.navbar.navbar-dark {
+    background-color: #000000 !important;
+}
+
+/* Estilo específico para os links da barra de navegação escura */
+.navbar.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+/* Estilo para o container de cards, com layout flexível e espaço ao redor */
 .card-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-/* Estilizando o card individual */
+/* Estilo para cada card, com largura, altura e margens específicas */
 .card {
     position: relative;
     overflow: hidden;
@@ -30,106 +37,294 @@ body, h1, h2, h3, p {
     margin: 10px;
 }
 
-/* Estilizando a imagem de fundo do card */
+/* Estilo para a imagem de fundo do card, cobrindo 100% do container */
 .card-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Estilizando o overlay */
-.overlay {
+/* Estilo dos h1*/
+.ptn_title {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.aboutme_title {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.form_title {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.p_boutme {
+    margin: 20px 20px;
+}
+
+/* Estilo para a sobreposição no card, inicialmente transparente e aparecendo ao passar o mouse */
+.overlay-div1 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.835); /* Overlay escuro com 50% de opacidade */
+    background: rgba(0, 0, 0, 0.746); /* Altere aqui para a cor desejada */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.3s ease; /* Efeito de transição suave */
+    z-index: 2; /* Certifique-se de que a overlay está acima da imagem de fundo */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-/* Exibindo o overlay ao passar o mouse sobre o card */
-.card:hover .overlay {
-    opacity: 1;
+/* Aumenta a opacidade da sobreposição ao passar o mouse no card */
+.card:hover .overlay-div1 {
+    opacity: 0; /* Defina a opacidade como 0 para esconder a overlay */
 }
 
-/* Estilizando o conteúdo do card sobreposto */
+/* Estilo para o conteúdo dentro do card */
 .card-content {
     text-align: center;
-    color: #fff; /* Cor do texto */
-}
-
-/* Estilizando o botão */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    text-decoration: none;
     color: #fff;
-    background-color: #007bff; /* Cor do botão */
-    border-radius: 5px;
 }
 
-/* Efeito de hover no botão */
-.btn:hover {
-    background-color: #0056b3; /* Cor alterada ao passar o mouse */
-}
-
-/* styles.css */
-
-
+/* Estilo para o formulário, com largura, margem, e alinhamento específicos */
 form {
-    width: calc(100% - 60px); /* Ajustando a largura para acomodar a margem nas laterais */
-    margin: 0 auto; /* Adicionando margem nas laterais e centralizando o formulário */
+    width: calc(100% - 60px);
+    margin: 30px 30px;
     text-align: center;
+    border: 2px solid #000000; /* Borda com 2px e cor branca */
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
 }
 
-
-
+/* Estilo para os elementos dentro do formulário, com margem inferior */
 form div {
     margin-bottom: 15px;
-    
 }
 
+/* Estilo para rótulos dentro do formulário */
 label {
     display: block;
     margin-bottom: 5px;
 }
 
-input,
-textarea {
-    width: 100%;
+/* Estilo para inputs e textareas dentro do formulário, ocupando 100% da largura */
+input, textarea {
+    width: calc(100% - 16px); /* Considerando o padding */
     padding: 8px;
     box-sizing: border-box;
+    border: 2px solid #000000; /* Borda com 2px e cor branca */
+    border-radius: 10px; /* Cantos arredondados */
 }
 
+/* Estilo para botões dentro do formulário, com cor de fundo e sem borda */
 button {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
+    border-radius: 5px; /* Cantos arredondados */
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+/* Altera a cor de fundo do botão ao passar o mouse */
 button:hover {
     background-color: #0056b3;
 }
 
-/* Ajustando a última div para manter os botões de rádio na mesma linha */
+/* Estilo para a última div dentro do formulário, com layout flexível e espaço ao redor */
 form div:last-child {
     display: flex;
     justify-content: space-around;
 }
 
+/* Estilo para o rodapé da página */
 .footer {
     background-color: #000;
     color: #fff;
     padding: 10px;
     text-align: center;
     font-size: 12px;
+}
+
+/* Estilo para a seção de cabeçalho, com imagem de fundo, altura específica e texto centralizado */
+.header-section {
+    position: relative;
+    background-image: url('media/div1_bg.jpg');
+    background-size: cover;
+    height: 500px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para o título dentro da seção de cabeçalho, com margem inferior e z-index para aparecer na frente da overlay */
+.header-section h1 {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3; /* Certifique-se de que o texto está acima da overlay */
+}
+
+.header-section h2 {
+    font-size: 1.5em; /* Ajuste o tamanho do texto conforme necessário */
+    margin-top: 10px; /* Adicione espaço superior ao segundo título */
+    z-index: 3; /* Certifique-se de que o texto está acima da overlay */
+}
+
+/* Estilo para o container de botões dentro da seção de cabeçalho, com layout flexível e espaço entre os elementos e z-index para aparecer na frente da overlay */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 3; /* Certifique-se de que os botões estão acima da overlay */
+}
+
+/* Estilo para os botões dentro do container na seção de cabeçalho, com margens e bordas específicas */
+.buttons-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Altera a cor de fundo dos botões ao passar o mouse */
+.buttons-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a nova seção de Stacks de Código */
+.code-stacks-section {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0; /* Ajuste o padding conforme necessário */
+    text-align: center;
+}
+
+.code-stacks-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada card de Stack de Código */
+.code-stack-card {
+    width: 150px; /* Ajuste a largura conforme necessário */
+    height: 150px; /* Ajuste a altura conforme necessário */
+    background-color: transparent;
+    border: 2px solid #fff; /* Cor da borda conforme necessário */
+    border-radius: 15px; /* Cantos arredondados */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Estilo para o ícone dentro do card de Stack de Código */
+.code-stack-card img {
+    width: 60px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 60px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+/* Estilo para o nome abaixo do ícone no card de Stack de Código */
+.code-stack-card h3 {
+    margin-top: 10px; /* Espaço entre o ícone e o nome */
+    font-size: 1em; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+.portfolio-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Estilo para cada card no portfólio */
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Estilo para a imagem de fundo do card */
+.portfolio-card-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para a sobreposição escura no card, inicialmente transparente */
+.portfolio-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.735);
+    z-index: 2;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Aumenta a opacidade da sobreposição ao passar o mouse no card */
+.portfolio-card:hover .portfolio-card-overlay {
+    opacity: 1;
+}
+
+/* Estilo para o conteúdo dentro do card */
+.portfolio-card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+}
+
+/* Estilo para o título dentro do conteúdo do card */
+.portfolio-card-content h2 {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o subtítulo dentro do conteúdo do card */
+.portfolio-card-content .ptf_h3 {
+    font-size: 14px; /* Altere o tamanho do texto conforme necessário */
+}
+
+/* Estilo para o botão dentro do conteúdo do card */
+.portfolio-card-content .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Altera a cor de fundo do botão ao passar o mouse */
+.portfolio-card-content .btn:hover {
+    background-color: #0056b3;
 }
